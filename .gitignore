@@ -1,0 +1,24 @@
+# Build / run output (not uploaded)
+/build/
+/run/
+/.gradle/
+/localrepo/
+
+# Eclipse
+*.launch
+.classpath
+.project
+.settings/
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db

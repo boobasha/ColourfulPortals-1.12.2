@@ -1,0 +1,16 @@
+[
+{
+  "modid": "colourfulportalsmod",
+  "name": "Colourful Portals",
+  "description": "Adds colourful portals, which are made with a frame of wool/stained clay/stained glass/any other coloured block and a new colourful water. Ported to 1.12.2.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.minecraftforum.net/topic/1965583-colourful-portals-mod-v132/",
+  "updateUrl": "",
+  "authorList": ["Tmtravlr"],
+  "credits": "Made by Tmtravlr. Ported to 1.12.2.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
