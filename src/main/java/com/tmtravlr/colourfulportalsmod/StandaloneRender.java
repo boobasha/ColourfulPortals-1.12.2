@@ -121,10 +121,11 @@ public final class StandaloneRender {
 		useSprite(frameSprite);
 
 		setColor(0.5F * red, 0.5F * green, 0.5F * blue);
-		vert(p(0.95, xMin, xMax), yMin, p(0.95, zMin, zMax), p(0.95, uMin, uMax), p(0.8, vMin, vMax));
-		vert(p(0.05, xMin, xMax), yMin, p(0.95, zMin, zMax), p(0.95, uMin, uMax), vMin);
-		vert(p(0.05, xMin, xMax), yMin, p(0.05, zMin, zMax), p(0.05, uMin, uMax), vMin);
-		vert(p(0.95, xMin, xMax), yMin, p(0.05, zMin, zMax), p(0.05, uMin, uMax), p(0.8, vMin, vMax));
+		// Full-size underside (not inset 0.05) so there is no dark square seam showing through the swirl panel below it.
+		vert(xMax, yMin, zMax, uMax, vMax);
+		vert(xMin, yMin, zMax, uMin, vMax);
+		vert(xMin, yMin, zMin, uMin, vMin);
+		vert(xMax, yMin, zMin, uMax, vMin);
 
 		setColor(0.6F * red, 0.6F * green, 0.6F * blue);
 		vert(p(0.95, xMin, xMax), yMin, p(0.05, zMin, zMax), p(0.05, uMin, uMax), vMin);
@@ -198,7 +199,9 @@ public final class StandaloneRender {
 	}
 
 	private static void renderPortal(TextureAtlasSprite portalSprite) {
-		xMin = 0; xMax = 1; yMin = 0; yMax = 0.8D; zMin = 0; zMax = 1;
+		// yMin sits a hair below the block so the side curtains and the underside panel meet at the
+		// same height (no gap between them) while staying just clear of the opaque frame underside at y=0.
+		xMin = 0; xMax = 1; yMin = -0.01D; yMax = 0.8D; zMin = 0; zMax = 1;
 		useSprite(portalSprite);
 		for (int i = 0; i < 8; i++) {
 			double u1 = 0, u2 = 0, v1 = 0, v2 = 0;
@@ -246,7 +249,7 @@ public final class StandaloneRender {
 		// (the original only had side curtains + the top pool, leaving the bottom bare when viewed from below).
 		// Sit it clearly below the frame's dark bottom face (avoids z-fighting) and use a stronger alpha so
 		// the swirl reads over the dark underside rather than the frame showing through.
-		double yb = yMin - 0.01D;
+		double yb = yMin;
 		setColorA(1F, 1F, 1F, 0.7F);
 		vert(xMin, yb, zMin, uMin, vMin);
 		vert(xMin, yb, zMax, uMin, vMax);

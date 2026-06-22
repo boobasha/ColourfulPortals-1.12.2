@@ -37,7 +37,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
-@Mod(modid = ColourfulPortalsMod.MODID, name = "Colourful Portals Mod", version = "1.4.3", acceptedMinecraftVersions = "[1.12,1.12.2]")
+@Mod(modid = ColourfulPortalsMod.MODID, name = "Colourful Portals Mod", version = "1.0.1", acceptedMinecraftVersions = "[1.12,1.12.2]")
 public class ColourfulPortalsMod {
 
 	public static final String MODID = "colourfulportalsmod";
@@ -130,8 +130,10 @@ public class ColourfulPortalsMod {
 		maxPortalGenerationDistance = config.get("other", "Random Portal Generation Max Distance", 3000).getInt();
 		maxPortalsPerType = config.get("other", "Maximum Number of Portals per Type (Colour and Material)", -1).getInt();
 		maxPortalSizeCheck = config.get("other", "Maximum Portal Size (Make Bigger for Larger Portals)", 16).getInt();
-		xpLevelMixingCost = config.get("other", "Number of XP Levels Needed to Mix Colourful Water", 2).getInt();
-		xpLevelRemixingCost = config.get("other", "Number of XP Levels Needed to Re-Mix Colourful Water", 1).getInt();
+		// Fixed costs (not read from config) so an existing colourfulportals.cfg can't override them:
+		// Bucket of Dyes = 2 levels, Partially Enchanted Bucket of Dyes = 1 level.
+		xpLevelMixingCost = 2;
+		xpLevelRemixingCost = 1;
 		xpBottleCrafting = config.get("other", "Allow crafting of colourful water with XP bottles (for automation)", false).getBoolean();
 		addColourfulWaterToDungeonChests = config.getBoolean("Add Buckets of Colourful Water to Dungeon Chests?", "other", true,
 				"If set to true, full and empty buckets of colourful water will occasionally spawn in chests.");

@@ -3,9 +3,9 @@
 [![Language](https://img.shields.io/badge/语言-中文-brightgreen?style=for-the-badge)](README.md)
 [![Language](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README_EN.md)
 
-> 当前：**中文** ｜ 点击右上方蓝色按钮切换 [English](README_EN.md)
+> 🌐 Language: **中文** · Click the **English** badge above to switch.
 
-将 Tmtravlr 的 **Colourful Portals**（多彩传送门，v1.4.3）从 Minecraft **1.7.10** 移植到 **1.12.2 (Forge)**。所有原版贴图、音效、语言文本均沿用（仅按 1.12.2 要求把个别贴图文件名改为小写）。
+将 Tmtravlr 的 **Colourful Portals**（多彩传送门）从 Minecraft **1.7.10** 移植到 **1.12.2 (Forge)**，移植版本 **1.0.1**。所有原版贴图、音效、语言文本均沿用（仅按 1.12.2 要求把个别贴图文件名改为小写）。
 
 ## 简介
 
@@ -22,7 +22,7 @@
 
 ## 安装
 
-把 `ColourfulPortals-1.12.2-1.4.3.jar` 放进 1.12.2 Forge 的 `mods` 文件夹即可。
+把 `ColourfulPortals-1.12.2-1.0.1.jar` 放进 1.12.2 Forge 的 `mods` 文件夹即可。
 
 ## 构建
 
@@ -37,7 +37,7 @@ gradlew.bat build
 JAVA_HOME="/c/Program Files/Zulu/zulu-8" ./gradlew build
 ```
 
-产物位于：`build/libs/ColourfulPortals-1.12.2-1.4.3.jar`
+产物位于：`build/libs/ColourfulPortals-1.12.2-1.0.1.jar`
 
 其它常用命令：
 

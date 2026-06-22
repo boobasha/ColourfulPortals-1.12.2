@@ -3,9 +3,9 @@
 [![Language](https://img.shields.io/badge/语言-中文-blue?style=for-the-badge)](README.md)
 [![Language](https://img.shields.io/badge/Language-English-brightgreen?style=for-the-badge)](README_EN.md)
 
-> Current: **English** ｜ Click the blue button to switch to [中文](README.md)
+> 🌐 Language: **English** · Click the **中文** badge above to switch.
 
-A port of Tmtravlr's **Colourful Portals** (v1.4.3) from Minecraft **1.7.10** to **1.12.2 (Forge)**. All original textures, sounds and language files are reused (only a few texture filenames were lower-cased as 1.12.2 requires).
+A port of Tmtravlr's **Colourful Portals** from Minecraft **1.7.10** to **1.12.2 (Forge)**, port version **1.0.1**. All original textures, sounds and language files are reused (only a few texture filenames were lower-cased as 1.12.2 requires).
 
 ## About
 
@@ -22,7 +22,7 @@ Build a frame out of wool / stained clay / stained glass and fill it with **Colo
 
 ## Install
 
-Drop `ColourfulPortals-1.12.2-1.4.3.jar` into a 1.12.2 Forge `mods` folder.
+Drop `ColourfulPortals-1.12.2-1.0.1.jar` into a 1.12.2 Forge `mods` folder.
 
 ## Building
 
@@ -37,7 +37,7 @@ gradlew.bat build
 JAVA_HOME="/c/Program Files/Zulu/zulu-8" ./gradlew build
 ```
 
-Output: `build/libs/ColourfulPortals-1.12.2-1.4.3.jar`
+Output: `build/libs/ColourfulPortals-1.12.2-1.0.1.jar`
 
 Other useful tasks:
 
